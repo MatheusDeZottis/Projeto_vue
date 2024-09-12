@@ -41,28 +41,28 @@
 
 
   .login-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+    max-width: 402px;
+    margin-block: auto;
+    padding: 40px 56px 40px 40px;
+    border: 6px solid #ddd;
+    border-radius: 9px;
+    background-color: rgb(176, 224, 230);
   }
   
   
   h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #007BFF;
+    color:  rgb(0, 0, 255);
   }
   
   .form-group {
     margin-bottom: 15px;
-    color: #007BFF;
+    color: rgb(0, 0, 255);
     
   }
   .form-group:hover {
-    color: tomato;
+    color: rgb(0, 0, 0);
   }
   
   label {
@@ -82,8 +82,8 @@
   }
   
   button {
-    width: 100%;
-    padding: 10px;
+    width: 110%;
+    padding: 8px;
     background-color: #4CAF50;
     color: white;
     border: none;
