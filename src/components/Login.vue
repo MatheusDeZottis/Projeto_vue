@@ -82,7 +82,7 @@
   }
   
   button {
-    width: 110%;
+    width: 100%;
     padding: 8px;
     background-color: #4CAF50;
     color: white;
