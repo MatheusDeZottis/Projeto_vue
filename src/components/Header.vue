@@ -41,12 +41,12 @@ input {
 }
 
 .Navegação {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
+    font-size: 17px;
     text-decoration: none;
     list-style: none;
   
