@@ -28,7 +28,7 @@
         display: flex;
         place-items: center;
         align-items: center;
-        height: 100vh;  
+        height: 110vh;  
         margin: 0;   
         justify-content: center;
         
