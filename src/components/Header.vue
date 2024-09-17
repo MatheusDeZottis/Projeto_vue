@@ -1,6 +1,5 @@
-
 <template>
-    <header>
+  <header>
     <div class="Header">
       <h1> <img src="" alt=""></h1>
       <nav>
@@ -21,45 +20,71 @@
 
 <style scoped>
 input {
-    background-color: rgb(177, 240, 174);
-    font-size: 16px;
-    box-shadow: black 5px;
-    border-radius: 7px;
-    color: black;
-    margin: 0;
-  
+  background-color: rgb(177, 240, 174);
+  font-size: 16px;
+  box-shadow: black 5px;
+  border-radius: 7px;
+  color: black;
+  margin: 0;
+
 
 }
-.Header{
+
+@media (min-width: 724px) and (max-width: 1024 ) {
+  .Header {
     position: fixed;
-    width: 100%;
+    width: 90%;
     margin: 0%;
     height: 20%;
     background-color: blue;
-    border-radius: 7%;
+    border-radius: 3%;
 
+  }
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  .Header {
+    position: fixed;
+    width: 90%;
+    margin-block: auto;
+    height: 20%;
+    background-color: blue;
+    border-radius: 3%;
+    margin-block: auto;
+
+  }
+}
+@media (min-width: 480px) and (max-width: 724px) {
+  .Header {
+    position: fixed;
+    width: 90%;
+    margin-block: auto;
+    height: 20%;
+    background-color: blue;
+    border-radius: 3%;
+    margin-block: auto;
+
+  }
+}
+
+
+
 
 .Navegação {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 17px;
-    text-decoration: none;
-    list-style: none;
-  
-}
-.Navegação:hover{
-    text-decoration: underline;
-   
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  text-decoration: none;
+  list-style: none;
+
 }
 
+.Navegação:hover {
+  text-decoration: underline;
 
-
-
-
+}
 </style>
 
 <script setup></script>
