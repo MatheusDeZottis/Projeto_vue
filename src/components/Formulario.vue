@@ -75,9 +75,6 @@
 }
 
 
-:global(body) { 
-  background-color: rgb(216,191,216);
-}
 
 #Cadrastor {
   background-color: #007BFF;
