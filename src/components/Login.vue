@@ -23,7 +23,18 @@
   
   <style scoped>
   
-@media (min-width: 1024px) {
+@media (min-width: 769px ) and (max-width: 124px ) {
+    main {
+        display: flex;
+        place-items: center;
+        align-items: center;
+        height: 100vh;  
+        margin: 0;   
+        justify-content: center;
+        
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
     main {
         display: flex;
         place-items: center;
@@ -35,6 +46,17 @@
     }
 }
 
+@media (min-width: 310px) and (max-width: 480px) {
+    main {
+        display: flex;
+        place-items: center;
+        align-items: center;
+        height: 100vh;  
+        margin: 0;   
+        justify-content: center;
+        
+    }
+}
 
 
 
