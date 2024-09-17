@@ -20,10 +20,10 @@
 input {
   background-color: rgb(177, 240, 174);
   font-size: 16px;
-  box-shadow: black 5px;
   border-radius: 7px;
   color: black;
   margin: 0;
+  
 
 
 }
@@ -34,30 +34,32 @@ input {
     width: 90%;
     margin: 0%;
     height: 20%;
-    background-color: rgb(3, 3, 66);
+    background-color: #3dff00;
     border-radius: 3%;
+    color: white;
 
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .Header {
     position: fixed;
-    width: 90%;
-    margin-block: auto;
-    height: 20%;
-    background-color: blue;
+    width: 100%;
+    
+    height: 10%;
+    background-color:#3dff00;
+    color: white;
     border-radius: 3%;
-    margin-block: auto;
+    
 
   }
 }
 @media (min-width: 480px) and (max-width: 724px) {
   .Header {
-    position: fixed;
-    width: 90%;
-    margin-block: auto;
-    height: 20%;
-    background-color: blue;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color:#3dff00;
+    color: white;
     border-radius: 3%;
     margin-block: auto;
 
@@ -68,8 +70,8 @@ input {
 
 
 .Navegação {
-  width: 80%;
-  margin: 0 auto;
+  width: 74%;
+  margin: -60px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
