@@ -1,22 +1,20 @@
 <template>
   <header>
     <div class="Header">
-      <h1> <img src="" alt=""></h1>
+      <h1><img src="" alt=""></h1>
       <nav>
         <ul class="Navegação">
           <li><router-link to="/home">Home</router-link></li>
           <li><router-link to="/about">Sobre</router-link></li>
-          <li><router-link to="/services">Serviços</router-link></li>
-          <li><router-link to="/contact">Contato</router-link></li>
-          <input type="button" value="Login">
+          <li><a href="https://github.com/MatheusDeZottis" target="_blank">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/matheus-de-zottis-2108b82b5/edit/forms/skills/new/?profileFormEntryPoint=PROFILE_SECTION" target="_blank">Contato</a></li>
+          <li><router-link to="/login"><input type="button" value="Login"></router-link></li>
         </ul>
       </nav>
     </div>
   </header>
-
-
-
 </template>
+
 
 <style scoped>
 input {
@@ -36,7 +34,7 @@ input {
     width: 90%;
     margin: 0%;
     height: 20%;
-    background-color: blue;
+    background-color: rgb(3, 3, 66);
     border-radius: 3%;
 
   }
