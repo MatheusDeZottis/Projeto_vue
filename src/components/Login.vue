@@ -23,7 +23,7 @@
   
   <style scoped>
   
-@media (min-width: 769px ) and (max-width: 124px ) {
+@media (min-width: 769px ) and (max-width: 1240px ) {
     main {
         display: flex;
         place-items: center;
