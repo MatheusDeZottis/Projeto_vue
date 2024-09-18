@@ -69,6 +69,7 @@
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
+    margin-top: 74px;
    
 
   }
