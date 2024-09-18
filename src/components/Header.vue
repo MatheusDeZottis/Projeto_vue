@@ -26,30 +26,29 @@ input {
   
 
 
-}
+} 
 
-@media (min-width: 724px) and (max-width: 1024 ) {
+@media (min-width: 724px) and (max-width: 1024px) {
   .Header {
     position: fixed;
-    width: 90%;
+    width: 100%;
     margin: 0%;
     height: 20%;
     background-color: #3dff00;
     border-radius: 3%;
     color: white;
-
   }
 }
+
 @media (min-width: 320px) and (max-width: 480px) {
   .Header {
     position: fixed;
-    width: 100%;
-    
-    height: 10%;
-    background-color:#3dff00;
+    width: 100%;    
+    height: 12%;
+    background-color:#3dff00 ;
     color: white;
     border-radius: 3%;
-    
+    margin: -9px;
 
   }
 }
@@ -61,13 +60,21 @@ input {
     background-color:#3dff00;
     color: white;
     border-radius: 3%;
-    margin-block: auto;
+   
 
   }
 }
-
-
-
+@media (min-width: 1024px){
+  .Header {
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    background-color: #3dff00;
+    border-radius: 3%;
+    color: white;
+    margin: -8px;
+  }
+}
 
 .Navegação {
   width: 74%;
@@ -82,7 +89,7 @@ input {
 }
 
 .Navegação:hover {
-  text-decoration: underline;
+  text-decoration: solid;
 
 }
 </style>
