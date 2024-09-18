@@ -14,7 +14,7 @@
         <button type="submit" class="btn">Entrar</button>
       </form>
       <div class="links">
-        <a href="/register" class="link">Cadastrar</a>
+        <a href="/Formulario" class="link">Cadastrar</a>
         <a href="/forgot-password" class="link">Esqueci a Senha</a>
       </div>
     </div> 
