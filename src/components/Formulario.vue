@@ -69,7 +69,7 @@
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
-    margin-top: 74px;
+    
    
 
   }
@@ -104,6 +104,9 @@
   color: #000000;
   margin-block: auto;
   text-align: left;
+  margin-top: 70px;
+  
+
 }
 
 
