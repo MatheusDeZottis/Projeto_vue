@@ -15,6 +15,10 @@
 
 <style scoped>
 
+.Rodape {
+    background-color:  rgb(50,205,50) ;
+}
+
 </style>
 
 <script>
