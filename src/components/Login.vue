@@ -104,7 +104,7 @@
   }
   
   button {
-    width: 100%;
+    width: 111%;
     padding: 8px;
     background-color: #4CAF50;
     color: white;
