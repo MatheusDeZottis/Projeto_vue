@@ -67,7 +67,7 @@ input {
 @media (min-width: 1024px){
   .Header {
     position: fixed;
-    width: 100%;
+    width: 101%;
     height: 10%;
     background-color: #3dff00;
     border-radius: 3%;
