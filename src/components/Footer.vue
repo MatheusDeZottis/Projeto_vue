@@ -21,9 +21,7 @@
     position: absolute;
     width: 100%;
     height: 80px;
-    margin-top: 100%;
-    
-    text-align: center;
+    margin-top: 100%;      text-align: center;
     background-color: #3dff00;
     display: block;
     z-index: 1000; /* faz que o rodapé fique em cima dee outros elementos caso seja necessario */
