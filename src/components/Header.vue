@@ -17,16 +17,42 @@
 
 
 <style scoped>
-input {
-  background-color: rgb(177, 240, 174);
-  font-size: 16px;
-  border-radius: 7px;
-  color: black;
-  margin: 0;
-  
 
+li {
+  list-style-type: none;
+}
 
-} 
+li input[type="button"] {
+  background: linear-gradient(45deg, #9daaf7, #e4dfa0);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform-origin: center;
+}
+
+li input[type="button"]:hover {
+  animation: pulse 1s infinite;
+  transform: rotate(5deg);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(240, 101, 149, 0.7), 0 0 20px rgba(255, 107, 107, 0.7), 0 0 30px rgba(240, 101, 149, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px rgb(245, 8, 225), 0 0 30px rgba(240, 101, 149, 1), 0 0 40px rgb(238, 3, 3);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 26, 255, 0.7), 0 0 30px rgba(215, 253, 0, 0.7);
+  }
+}
+
 
 @media (min-width: 724px) and (max-width: 1024px) {
   .Header {
