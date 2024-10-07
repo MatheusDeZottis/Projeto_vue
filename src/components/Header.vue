@@ -109,15 +109,11 @@ li input[type="button"]:hover {
   justify-content: space-between;
   align-items: center;
   font-size: 17px;
-  text-decoration: none;
-  list-style: none;
 
 }
 
-.Navegação:hover {
-  text-decoration: solid;
 
-}
+
 </style>
 
 <script setup></script>
