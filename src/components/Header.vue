@@ -3,13 +3,18 @@
     <div class="Header">
       <h1><img src="" alt=""></h1>
       <nav>
+        
         <ul class="Navegação">
           <li><router-link to="/home">Home</router-link></li>
           <li><router-link to="/about">Sobre</router-link></li>
+
           <li><a href="https://github.com/MatheusDeZottis" target="_blank">GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/matheus-de-zottis-2108b82b5/edit/forms/skills/new/?profileFormEntryPoint=PROFILE_SECTION" target="_blank">Contato</a></li>
+
+          
           <li><router-link to="/login"><input type="button" value="Login"></router-link></li>
         </ul>
+     
       </nav>
     </div>
   </header>
@@ -17,42 +22,6 @@
 
 
 <style scoped>
-
-li {
-  list-style-type: none;
-}
-
-li input[type="button"] {
-  background: linear-gradient(45deg, #9daaf7, #e4dfa0);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50px;
-  color: rgb(0, 0, 0);
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transform-origin: center;
-}
-
-li input[type="button"]:hover {
-  animation: pulse 1s infinite;
-  transform: rotate(5deg);
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 10px rgba(240, 101, 149, 0.7), 0 0 20px rgba(255, 107, 107, 0.7), 0 0 30px rgba(240, 101, 149, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 20px rgb(245, 8, 225), 0 0 30px rgba(240, 101, 149, 1), 0 0 40px rgb(238, 3, 3);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 26, 255, 0.7), 0 0 30px rgba(215, 253, 0, 0.7);
-  }
-}
-
 
 @media (min-width: 724px) and (max-width: 1024px) {
   .Header {
@@ -99,6 +68,10 @@ li input[type="button"]:hover {
     border-radius: 3%;
     color: white;
     margin: -8px;
+    z-index: 1000; /*
+    faz que o header fique por cima de outros elementos caso seja necessario
+     */
+
   }
 }
 
@@ -111,6 +84,43 @@ li input[type="button"]:hover {
   font-size: 17px;
 
 }
+
+.Navegação li {
+  list-style-type: none;
+  
+}
+
+li input[type="button"] {
+  background: linear-gradient(45deg, #9daaf7, #e4dfa0);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform-origin: center;
+}
+
+li input[type="button"]:hover {
+  animation: pulse 1s infinite;
+  transform: rotate(360deg);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(240, 101, 149, 0.7), 0 0 20px rgba(255, 107, 107, 0.7), 0 0 30px rgba(240, 101, 149, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px rgb(245, 8, 225), 0 0 30px rgba(240, 101, 149, 1), 0 0 40px rgb(238, 3, 3);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 26, 255, 0.7), 0 0 30px rgba(215, 253, 0, 0.7);
+  }
+}
+
 
 
 
