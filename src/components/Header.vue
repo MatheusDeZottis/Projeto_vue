@@ -12,7 +12,7 @@
           <li><a href="https://www.linkedin.com/in/matheus-de-zottis-2108b82b5/edit/forms/skills/new/?profileFormEntryPoint=PROFILE_SECTION" target="_blank">Contato</a></li>
 
           
-          <li><router-link to="/login"><input type="button" value="Certificados"></router-link></li>
+          <li><router-link to="/Certificados"><input type="button" value="Certificados"></router-link></li>
         </ul>
      
       </nav>
