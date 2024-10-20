@@ -5,7 +5,7 @@
       <nav>
         
         <ul class="Navegação">
-          <li><router-link to="/home">Home</router-link></li>
+          <li><router-link to="/Home">Home</router-link></li>
           <li><router-link to="/about">Sobre</router-link></li>
 
           <li><a href="https://github.com/MatheusDeZottis" target="_blank">GitHub</a></li>
@@ -39,11 +39,13 @@
   .Header {
     position: fixed;
     width: 100%;    
-    height: 12%;
+    height: 17%;
     background-color:#3dff00 ;
     color: white;
     border-radius: 3%;
     margin: -9px;
+    font-size: large;
+    font-weight: bolder;
 
   }
 }
@@ -51,7 +53,7 @@
   .Header {
     position: absolute;
     width: 100%;
-    height: 10%;
+    height: 17%;
     background-color:#3dff00;
     color: white;
     border-radius: 3%;
@@ -68,10 +70,8 @@
     border-radius: 3%;
     color: white;
     margin: -8px;
-    z-index: 1000; /*
-    faz que o header fique por cima de outros elementos caso seja necessario
-     */
-
+    z-index: 1000;/*faz que o header fique por cima de outros elementos caso seja necessario */
+    
   }
 }
 
@@ -121,7 +121,11 @@ li input[type="button"]:hover {
   }
 }
 
-
+a {
+  text-decoration: none;
+  font-size: large;
+  font-weight: bolder;
+}
 
 
 </style>
