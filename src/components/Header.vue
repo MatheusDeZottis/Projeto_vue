@@ -2,14 +2,7 @@
   <header>
     <div class="Header">
       <h1><img src="" alt=""></h1>
-
-      <!-- Botão do menu hambúrguer -->
-      <button class="menu-toggle" @click="toggleMenu">
-        ☰
-      </button>
-
-
-      <nav :class="{ open: isMenuOpen }">
+      <nav>
         
         <ul class="Navegação">
           <li><router-link to="/Home">Home</router-link></li>
