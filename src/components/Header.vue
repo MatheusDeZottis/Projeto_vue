@@ -2,6 +2,13 @@
   <header>
     <div class="Header">
       <h1><img src="" alt=""></h1>
+
+      <!-- Botão do menu hambúrguer -->
+      <button class="menu-toggle" @click="toggleMenu">
+        ☰
+      </button>
+
+      
       <nav>
         
         <ul class="Navegação">
