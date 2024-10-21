@@ -8,8 +8,8 @@
         ☰
       </button>
 
-      
-      <nav>
+
+      <nav :class="{ open: isMenuOpen }">
         
         <ul class="Navegação">
           <li><router-link to="/Home">Home</router-link></li>
