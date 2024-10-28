@@ -1,5 +1,5 @@
 <script setup>
-//import Carregamento from './components/Carregamento.vue';
+import Carregamento from './components/Carregamento.vue';
 
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue'
