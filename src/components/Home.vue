@@ -1,6 +1,9 @@
 <template>
     <RouterLink> Home </RouterLink>
-    <h1> Testando</h1>
+    <h1>Seja bem-vindo ao meu portfólio!
+        Aqui você encontra minhas experiências e projetos. </h1>
+
+    
 
 </template>
 
