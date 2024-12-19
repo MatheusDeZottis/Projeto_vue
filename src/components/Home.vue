@@ -20,5 +20,28 @@
 
 <script>
 
+import image1 from "@/assets/img/fotohackthon.jpg";
+import image2 from "@/assets/img/fotohackthon.jpg";
+import image3 from "@/assets/img/fotohackthon.jpg";
+import image4 from "@/assets/img/fotohackthon.jpg";
+
+export default {
+  data() {
+    return {
+      images: [image1, image2, image3, image4],
+      currentIndex: 0,
+    };
+  },
+  methods: {
+    nextSlide() {
+      this.currentIndex = (this.currentIndex + 1) % this.images.length;
+    },
+    prevSlide() {
+      this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+    },
+  },
+};
+
+
 
 </script>
