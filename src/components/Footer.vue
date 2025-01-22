@@ -2,7 +2,7 @@
     
     <footer>
         <div class="Rodape"> 
-         <p id="text_rodape">&copy; Desenvolvido por 
+         <p id="text_rodape">&copy; todos os direitos, reservados Desenvolvido por 
         <nav id="link_footer">
              <a href="https://github.com/MatheusDeZottis" target="_blank">Matheus De Zottis</a>
         </nav>
