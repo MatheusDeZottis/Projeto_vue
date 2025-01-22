@@ -1,72 +1,160 @@
 <template>
-  
-   
-    <h1>Seja bem-vindo ao meu portfólio!
-        Aqui você encontra minhas experiências e projetos. </h1>
+  <section class="section-carrosel">
+    <div class="carrosel">
+      <div class="carrosel-inner" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+        <div class="carrosel-item" v-for="(image, index) in images" :key="index">
+          <img :src="image" :alt="'Imagem ' + (index + 1)" />
+        </div>
+      </div>
 
-        <div class="carousel">
-    <div class="carousel-inner" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-      <div class="carousel-item" v-for="(image, index) in images" :key="index">
-        <img :src="image" :alt="'Image ' + (index + 1)" />
+      <!-- Botões de navegação -->
+      <button class="carrosel-control prev" @click="prevSlide">‹</button>
+      <button class="carrosel-control next" @click="nextSlide">›</button>
+
+      <!-- Indicadores de progresso -->
+      <div class="carrosel-indicators">
+        <span v-for="(image, index) in images" :key="index" 
+              :class="{ active: index === currentIndex }" 
+              @click="goToSlide(index)">
+        </span>
       </div>
     </div>
-    <button class="carousel-control prev" @click="prevSlide">‹</button>
-    <button class="carousel-control next" @click="nextSlide">›</button>
-    </div>
-
+  </section>
 </template>
 
 <style scoped>
-.carousel {
+/* Define o espaço abaixo do header */
+.section-carrosel {
   position: relative;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
+  margin: 80px auto 0; /* Ajusta o espaçamento abaixo do header */
+}
+
+/* Estrutura do carrossel */
+.carrosel {
+  position: relative;
+  width: 100%;
   height: 400px;
   overflow: hidden;
-  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.carousel-inner {
+.carrosel-inner {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 400%; /* 4 imagens */
+  transition: transform 0.5s ease-in-out; /* Transição mais fluida */
 }
 
-.carousel-item {
+.carrosel-item {
   min-width: 100%;
+  height: 100%;
   box-sizing: border-box;
 }
 
-.carousel-item img {
+.carrosel-item img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem ao tamanho do carrossel */
+  border-radius: 10px;
 }
 
-.carousel-control {
+/* Controles de navegação */
+.carrosel-control {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  color: white;
   border: none;
-  font-size: 24px;
+  font-size: 30px;
   cursor: pointer;
   padding: 10px;
   z-index: 10;
+  border-radius: 50%;
+  transition: background 0.3s ease;
 }
 
-.carousel-control.prev {
+.carrosel-control:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.carrosel-control.prev {
   left: 10px;
 }
 
-.carousel-control.next {
+.carrosel-control.next {
   right: 10px;
 }
 
+/* Indicadores de navegação */
+.carrosel-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carrosel-indicators span {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carrosel-indicators span.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .section-carrosel {
+    max-width: 90%;
+    margin-top: 60px;
+  }
+
+  .carrosel {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-carrosel {
+    margin-top: 50px;
+  }
+
+  .carrosel {
+    height: 300px;
+  }
+
+  .carrosel-control {
+    font-size: 24px;
+    padding: 8px;
+  }
+
+  .carrosel-indicators span {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-carrosel {
+    margin-top: 40px;
+  }
+
+  .carrosel {
+    height: 250px;
+  }
+}
 </style>
 
 <script>
-
 import image1 from "@/assets/img/fotohackthon.jpg";
 import image2 from "@/assets/img/fotohackthon.jpg";
 import image3 from "@/assets/img/fotohackthon.jpg";
@@ -86,9 +174,9 @@ export default {
     prevSlide() {
       this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
     },
+    goToSlide(index) {
+      this.currentIndex = index;
+    },
   },
 };
-
-
-
 </script>
