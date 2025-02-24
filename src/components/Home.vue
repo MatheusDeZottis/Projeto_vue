@@ -175,16 +175,17 @@
 </style>
 
 <script>
-import image1 from "@/assets/img/fotohackthon.jpg";
-import image2 from "@/assets/img/fotohackthon.jpg";
-import image3 from "@/assets/img/fotohackthon.jpg";
-import image4 from "@/assets/img/fotohackthon.jpg";
-
 export default {
   data() {
     return {
-      images: [image1, image2, image3, image4],
+      images: [
+        { src: require("@/assets/img/fotohackthon.jpg"), alt: "Descrição da imagem 1" },
+        { src: require("@/assets/img/fotohackthon.jpg"), alt: "Descrição da imagem 2" },
+        { src: require("@/assets/img/fotohackthon.jpg"), alt: "Descrição da imagem 3" },
+        { src: require("@/assets/img/fotohackthon.jpg"), alt: "Descrição da imagem 4" },
+      ],
       currentIndex: 0,
+      autoplayInterval: null,
     };
   },
   methods: {
@@ -197,6 +198,23 @@ export default {
     goToSlide(index) {
       this.currentIndex = index;
     },
+    startAutoplay() {
+      this.autoplayInterval = setInterval(() => {
+        this.nextSlide();
+      }, 5000); // Muda de slide a cada 5 segundos
+    },
+    stopAutoplay() {
+      if (this.autoplayInterval) {
+        clearInterval(this.autoplayInterval);
+        this.autoplayInterval = null;
+      }
+    },
+  },
+  mounted() {
+    this.startAutoplay(); // Inicia o autoplay ao carregar o componente
+  },
+  beforeUnmount() {
+    this.stopAutoplay(); // Limpa o intervalo ao desmontar o componente
   },
 };
 </script>
