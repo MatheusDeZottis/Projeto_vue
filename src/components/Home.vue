@@ -41,17 +41,14 @@
     </div>
   </section>
 </template>
-
 <style scoped>
-/* Define o espaço abaixo do header */
 .section-carrosel {
   position: relative;
   width: 100%;
   max-width: 800px;
-  margin: 80px auto 0; /* Ajusta o espaçamento abaixo do header */
+  margin: 80px auto 0;
 }
 
-/* Estrutura do carrossel */
 .carrosel {
   position: relative;
   width: 100%;
@@ -63,7 +60,7 @@
 
 .carrosel-inner {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Transição mais fluida */
+  transition: transform 0.5s ease-in-out;
 }
 
 .carrosel-item {
@@ -75,11 +72,10 @@
 .carrosel-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta a imagem ao tamanho do carrossel */
+  object-fit: cover;
   border-radius: 10px;
 }
 
-/* Controles de navegação */
 .carrosel-control {
   position: absolute;
   top: 50%;
@@ -92,11 +88,12 @@
   padding: 10px;
   z-index: 10;
   border-radius: 50%;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .carrosel-control:hover {
   background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .carrosel-control.prev {
@@ -107,7 +104,6 @@
   right: 10px;
 }
 
-/* Indicadores de navegação */
 .carrosel-indicators {
   position: absolute;
   bottom: 15px;
@@ -123,7 +119,11 @@
   background: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.carrosel-indicators span:hover {
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .carrosel-indicators span.active {
@@ -131,7 +131,6 @@
   transform: scale(1.2);
 }
 
-/* Responsividade */
 @media (max-width: 1024px) {
   .section-carrosel {
     max-width: 90%;
@@ -171,8 +170,19 @@
   .carrosel {
     height: 250px;
   }
+
+  .carrosel-control {
+    font-size: 20px;
+    padding: 6px;
+  }
+
+  .carrosel-indicators span {
+    width: 8px;
+    height: 8px;
+  }
 }
 </style>
+
 
 <script>
 export default {
