@@ -1,22 +1,42 @@
 <template>
-  <section class="section-carrosel">
+  <section class="section-carrosel" aria-label="Carrossel de imagens">
     <div class="carrosel">
       <div class="carrosel-inner" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-        <div class="carrosel-item" v-for="(image, index) in images" :key="index">
-          <img :src="image" :alt="'Imagem ' + (index + 1)" />
+        <div 
+          class="carrosel-item" 
+          v-for="(image, index) in images" 
+          :key="index" 
+          :aria-hidden="currentIndex !== index"
+          :aria-label="'Slide ' + (index + 1) + ' de ' + images.length"
+        >
+          <img 
+            :src="image.src" 
+            :alt="image.alt || 'Imagem ' + (index + 1)" 
+          />
         </div>
       </div>
 
       <!-- Botões de navegação -->
-      <button class="carrosel-control prev" @click="prevSlide">‹</button>
-      <button class="carrosel-control next" @click="nextSlide">›</button>
+      <button 
+        class="carrosel-control prev" 
+        @click="prevSlide" 
+        aria-label="Slide anterior"
+      >‹</button>
+      <button 
+        class="carrosel-control next" 
+        @click="nextSlide" 
+        aria-label="Próximo slide"
+      >›</button>
 
       <!-- Indicadores de progresso -->
       <div class="carrosel-indicators">
-        <span v-for="(image, index) in images" :key="index" 
-              :class="{ active: index === currentIndex }" 
-              @click="goToSlide(index)">
-        </span>
+        <span 
+          v-for="(image, index) in images" 
+          :key="index" 
+          :class="{ active: index === currentIndex }" 
+          @click="goToSlide(index)"
+          :aria-label="'Ir para o slide ' + (index + 1)"
+        ></span>
       </div>
     </div>
   </section>
